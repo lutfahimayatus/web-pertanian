@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,4 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/login', [LoginController::class, 'index']);
