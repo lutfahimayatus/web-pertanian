@@ -1,0 +1,90 @@
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+  }
+
+  .register-container {
+    border-top: 2px solid blue;
+    height: 550px;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register-container h3 {
+    text-align: center;
+    margin-top: 5px;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid beige;
+  }
+
+  .register-container .form-group {
+    margin-bottom: 30px;
+  }
+
+  .register-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 600;
+  }
+
+  .register-container .form-control {
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    width: 90%;
+  }
+
+  .register-container .btn-primary {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    width: 97%;
+  }
+
+  .register-container p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: small;
+  }
+
+  .register-container p a{
+    color: blue;
+    text-decoration: none;
+  }
+
+  .register-container .btn-primary:hover {
+    background-color: #0096FF;
+  }
+
+  .register-container .form-check-label {
+    color: #777;
+    font-size: 12px;
+  }
