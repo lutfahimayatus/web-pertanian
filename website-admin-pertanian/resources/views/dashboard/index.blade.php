@@ -26,23 +26,23 @@
                     <a href="" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-users"></span><span>Customer</span></a>
+                    <a href=""><span class="las la-users"></span><span>Produks</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-clipboard-list"></span><span>Project</span></a>
+                    <a href=""><span class="las la-clipboard-list"></span><span>Pemasok</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-shopping-bag"></span><span>Order</span></a>
+                    <a href=""><span class="las la-shopping-bag"></span><span>Kota</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-receipt"></span><span>Inventory</span></a>
+                    <a href=""><span class="las la-receipt"></span><span>Transaksi</span></a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href=""><span class="las la-user-circle"></span><span>Account</span></a>
                 </li>
                 <li>
                     <a href=""><span class="las la-clipboard-list"></span><span>Task</span></a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
@@ -85,7 +85,7 @@
                 <div class="card-single">
                     <div>
                         <h1>20</h1>
-                        <span>Projects</span>
+                        <span>Total Produks</span>
                     </div>
                     <div>
                         <span class="las la-clipboard-list"></span>
@@ -105,7 +105,7 @@
                 <div class="card-single">
                     <div>
                         <h1>$40</h1>
-                        <span>Income</span>
+                        <span>Balence</span>
                     </div>
                     <div>
                         <span class="lab la-google-wallet"></span>
