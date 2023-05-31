@@ -29,13 +29,13 @@
                     <a href="/dashboard/produks"><span class="las la-users"></span><span>Produks</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-clipboard-list"></span><span>Pemasok</span></a>
+                    <a href="/dashboard/pemasoks"><span class="las la-clipboard-list"></span><span>Pemasok</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-shopping-bag"></span><span>Kota</span></a>
+                    <a href="/dashboard/kotas"><span class="las la-shopping-bag"></span><span>Kota</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-receipt"></span><span>Transaksi</span></a>
+                    <a href="/dashboard/transaksis"><span class="las la-receipt"></span><span>Transaksi</span></a>
                 </li>
             </ul>
         </div>
@@ -69,7 +69,7 @@
                 <div class="card-single">
                     <div>
                         <h1>10</h1>
-                        <span>Customers</span>
+                        <span>Total Orders</span>
                     </div>
                     <div>
                         <span class="las la-users"></span>
@@ -111,7 +111,7 @@
                 <div class="projects">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Recent Project</h3>
+                            <h3>Daftar Transaksi</h3>
 
                             <button>See alls <span class="las la-arrow-right"></span></button>
                         </div>
@@ -121,9 +121,10 @@
                                 <table width="100%">
                                     <thead>
                                         <tr>
-                                            <td>Project Title</td>
-                                            <td>Department</td>
+                                            <td>ID Transaksi</td>
+                                            <td>Pelanggan</td>
                                             <td>Status</td>
+                                            <td>Due Date</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -233,7 +234,7 @@
                 <div class="customers">
                     <div class="card">
                         <div class="card-header">
-                            <h3>New Customer</h3>
+                            <h3>Top Produks</h3>
 
                             <button>See alls <span class="las la-arrow-right"></span></button>
                         </div>
