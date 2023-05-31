@@ -18,7 +18,7 @@
   <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-dashboard"></span> <span>Dashboard</span></h2>
+            <h2><span class="lab la-dashboard"></span> <span>MAYASARI</span></h2>
         </div>
         <div class="sidebar-menu">
             <ul>
@@ -26,7 +26,7 @@
                     <a href="" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-users"></span><span>Produks</span></a>
+                    <a href="/dashboard/produks"><span class="las la-users"></span><span>Produks</span></a>
                 </li>
                 <li>
                     <a href=""><span class="las la-clipboard-list"></span><span>Pemasok</span></a>
@@ -37,12 +37,6 @@
                 <li>
                     <a href=""><span class="las la-receipt"></span><span>Transaksi</span></a>
                 </li>
-                <!-- <li>
-                    <a href=""><span class="las la-user-circle"></span><span>Account</span></a>
-                </li>
-                <li>
-                    <a href=""><span class="las la-clipboard-list"></span><span>Task</span></a>
-                </li> -->
             </ul>
         </div>
     </div>
