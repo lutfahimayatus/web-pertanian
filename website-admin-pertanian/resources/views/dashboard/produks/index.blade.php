@@ -7,8 +7,13 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Css Tabel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
     <!-- Line CSS Template -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- /Public/CSS -->
     <link rel="stylesheet" href="/css/dashboard.css">
   </head>
@@ -64,67 +69,60 @@
             </div>
       </header>
       <main>
-        <!-- Container -->
         <div class="container">
-              <div class="row my-3">
-                <div class="col-md">
-                  <h2>Data Produk</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md">
-                  <a href="#" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Data</a>
-                  <a href="#" class= "btn btn-success"><i class="bi bi-printer"></i> Cetak Data</a>
-                </div>
-              </div>
+          <div class="row my-3">
+            <div class="col-md">
+              <h2>Data Siswa</h2>
             </div>
-            
-            <!-- tabel -->
-            <div class="row my-5">
-              <div class="col-md">
-              <table id="example" class="table table-striped" style="width:100%">
-                  <thead>
-                      <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>$320,800</td>
-                        </tr>
-                        <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011-07-25</td>
-                            <td>$170,750</td>
-                        </tr>
-                        <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009-01-12</td>
-                            <td>$86,000</td>
-                        </tr>
-                    </tbody>
-                  </table>
-              </div>
+            <hr>
+          </div>
+          <div class="row">
+            <div class="col-md">
+              <a href="#" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Data</a>
+              <a href="#" class="btn btn-success ms-1" target="_blank"><i class="bi bi-printer"></i> Print Data</a>
             </div>
           </div>
-        <!-- End Container -->
+          <div class="row my-5">
+            <div class="col-md">
+              <table id="example" class="table table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Nama Produk</th>
+                        <th>Harga</th>
+                        <th>Deskripsi</th>
+                        <th>Stok</th>
+                        <th>Option</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                          <td>Tiger Nixon</td>
+                          <td>Rp. 15.000</td>
+                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>50</td>
+                          <td>2011-04-25</td>
+                      </tr>
+                      <tr>
+                          <td>Tiger Nixon</td>
+                          <td>Rp. 15.000</td>
+                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>50</td>
+                          <td>2011-04-25</td>
+                      </tr>
+                      <tr>
+                          <td>Tiger Nixon</td>
+                          <td>Rp. 15.000</td>
+                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>50</td>
+                          <td>2011-04-25</td>
+                      </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </main>
+    </div>
 
 
 
@@ -148,9 +146,9 @@
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     
     <script>
-    $(document).ready(function () {
-    $('#example').DataTable();
-    });
+      $(document).ready(function () {
+      $('#example').DataTable();
+      });
     </script>
   </body>
 </html>

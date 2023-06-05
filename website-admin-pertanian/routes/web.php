@@ -33,7 +33,11 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+
 Route::get('/dashboard/produks', [ProdukController::class, 'index']);
+
 Route::get('/dashboard/pemasoks', [PemasokController::class, 'index']);
+
 Route::get('/dashboard/kotas', [KotaController::class, 'index']);
+
 Route::get('/dashboard/transaksis', [TransaksiController::class, 'index']);

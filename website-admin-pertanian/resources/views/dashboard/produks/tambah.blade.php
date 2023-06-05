@@ -7,14 +7,19 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Css Tabel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
     <!-- Line CSS Template -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- /Public/CSS -->
     <link rel="stylesheet" href="/css/dashboard.css">
   </head>
   <body>
-
   <input type="checkbox" id="nav-toggle">
+    <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
             <h2><span class="lab la-dashboard"></span> <span>MAYASARI</span></h2>
@@ -39,16 +44,16 @@
             </ul>
         </div>
     </div>
+    <!-- End Sidebar -->
 
     <div class="main-content">
-        <header>
-            <h2>
-                <label for="nav-toggle">
-                    <span class="las la-bars"></span>
-                </label>
-
-                Pemasok
-            </h2>
+      <header>
+        <h2>
+          <label for="nav-toggle">
+            <span class="las la-bars"></span>
+          </label>
+            Dashboard
+        </h2>
 
             <div class="search-wrapper">
                 <span class="las la-search"></span>
@@ -62,58 +67,55 @@
                     <small>Administrator</small>
                 </div>
             </div>
-        </header>
-        <main>
-            <div class="container d-block">
-                <h2>Data Pemasok</h2>
+      </header>
+      <main>
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-md">
+                    <h2><i class="bi bi-plus-circle"></i> Tambah Data Produk</h2>
+                </div>
                 <hr>
-                <a href="#" class="btn btn-primary">Tambah Pemasok</a>
             </div>
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Pemasok</th>
-                    <th scope="col">No.telp</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Otto</td>
-                    <td>0987654321</td>
-                    <td>haha@gmail.com</td>
-                    <td>jalanan wkviearibyrevbrejb</td>
-                    <td>Update Delete</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Otto</td>
-                    <td>0987654321</td>
-                    <td>haha@gmail.com</td>
-                    <td>jalanan wkviearibyrevbrejb</td>
-                    <td>Update Delete</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Otto</td>
-                    <td>0987654321</td>
-                    <td>haha@gmail.com</td>
-                    <td>jalanan wkviearibyrevbrejb</td>
-                    <td>Update Delete</td>
-                    </tr>
-                </tbody>
-            </table>
-        </main>
+        </div>
+        <!-- Footer -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>About</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint iure dolor magni commodi cum expedita unde doloribus, fugiat nemo deleniti culpa et, illo temporibus impedit. Minima, fugiat. Vel, perferendis commodi.</p>
+            </div>
+            <div class="col-md-6 text-center link">
+              <h4>Link Account</h4>
+              <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+              <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
+              <a href="https://web.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp"></i> Whatsapp</a>
+              <a href="https://github.com/" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </div>
+          </div>
+          <footer class="text-center" style="padding: 5px">
+          <p>Created with by <u class="fw-bold">MAYASARI</u></p>
+        </footer>
+        </div>
+        <!-- End Footer -->
+      </main>
     </div>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </script>
   </body>
 </html>
