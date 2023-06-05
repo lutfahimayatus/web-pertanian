@@ -8,12 +8,12 @@
 }
 
 .sidebar {
-    width: 345px;
+    width: 300px;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
-    background: #82CD47;
+    background: #82cd47;
     z-index: 100;
     transition: width 300ms;
 }
@@ -25,7 +25,7 @@
 }
 
 .sidebar-brand span {
-    display: inline block;
+    display: inline-block;
     padding-right: 1rem;
 }
 
@@ -35,8 +35,8 @@
 
 .sidebar-menu li {
     width: 100%;
-    margin-bottom: 2rem;
-    padding-left: 0.5rem;
+    margin-bottom: 1.7rem;
+    padding-left: 1rem;
 }
 
 .sidebar-menu a {
@@ -50,7 +50,7 @@
     background: #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: #82CD47;
+    color: #82cd47;
     border-radius: 30px 0px 0px 30px;
 }
 
@@ -60,12 +60,12 @@
 }
 
 #nav-toggle:checked + .sidebar {
-    width: 120px;
+    width: 70px;
 }
 
 #nav-toggle:checked + .sidebar .sidebar-brand,
 #nav-toggle:checked + .sidebar li {
-    padding-left: 1rem;
+    padding-left: 0.2rem;
     text-align: center;
 }
 
@@ -79,17 +79,17 @@
 }
 
 #nav-toggle:checked ~ .main-content {
-    margin-left: 120px;
+    margin-left: 70px;
 }
 
 #nav-toggle:checked ~ .main-content header {
-    width: calc(100% 120px);
-    left: 120px;
+    width: calc(100% - 70px);
+    left: 70px;
 }
 
 .main-content {
     transition: margin-left 300ms;
-    margin-left: 345px;
+    margin-left: 300px;
 }
 
 header {
@@ -99,8 +99,8 @@ header {
     padding: 1rem 1.5rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     position: fixed;
-    left: 345px;
-    width: calc(100% - 345px);
+    left: 300px;
+    width: calc(100% - 300px);
     top: 0;
     z-index: 100;
     transition: left 300ms;
@@ -110,7 +110,7 @@ header {
     display: none;
 }
 
-header h3 {
+header h2 {
     color: grey;
 }
 
@@ -136,7 +136,7 @@ header label span {
 
 .search-wrapper input {
     height: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
     border: none;
     outline: none;
 }
@@ -151,16 +151,16 @@ header label span {
     margin-right: 1rem;
 }
 
-.user-wrapper small{
+.user-wrapper small {
     display: inline-block;
     color: grey;
 }
 
 main {
-    margin-top: 100px;
+    margin-top: 85px;
     padding: 2rem 1.5rem;
     background: #f1f5f9;
-    min-height:  calc(100vh - 90px);
+    min-height: calc(100vh - 90px);
 }
 
 .cards {
@@ -180,7 +180,7 @@ main {
 
 .card-single div:last-child span {
     font-size: 3rem;
-    color: #82CD47;
+    color: #82cd47;
 }
 
 .card-single div:first-child span {
@@ -188,12 +188,12 @@ main {
 }
 
 .card-single:last-child {
-    background: #82CD47;
+    background: #82cd47;
 }
 
 .card-single:last-child h1,
 .card-single:last-child div:last-child span,
-.card-single:last-child div:first-child span  {
+.card-single:last-child div:first-child span {
     color: #fff;
 }
 
@@ -221,12 +221,12 @@ main {
 }
 
 .card-header button {
-    background: #82CD47;
+    background: #82cd47;
     border-radius: 10px;
     color: #fff;
-    font-size: .8rem;
-    padding: .5rem;
-    border: 1px solid #82CD47;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    border: 1px solid #82cd47;
 }
 
 table {
@@ -243,8 +243,8 @@ thead td {
 }
 
 td {
-    padding: .5rem 1rem;
-    font-size: .9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
     color: #222;
 }
 
@@ -282,7 +282,7 @@ tr td:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem .7rem;
+    padding: 0.5rem 0.7rem;
 }
 
 .info {
@@ -296,7 +296,7 @@ tr td:last-child {
 }
 
 .info h4 {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: #222;
 }
@@ -309,35 +309,34 @@ tr td:last-child {
 .contact span {
     font-size: 1.2rem;
     display: inline-block;
-    margin-left: .5rem;
-    color: #82CD47;
+    margin-left: 0.5rem;
+    color: #82cd47;
 }
 
 @media only screen and (max-width: 1200px) {
-
     .sidebar {
         width: 120px;
     }
-    
+
     .sidebar .sidebar-brand,
     .sidebar li {
         padding-left: 1rem;
         text-align: center;
     }
-    
+
     .sidebar li a {
         padding-left: 0rem;
     }
-    
+
     .sidebar .sidebar-brand h2 span:last-child,
     .sidebar li a span:last-child {
         display: none;
     }
-    
+
     .main-content {
         margin-left: 120px;
     }
-    
+
     .main-content header {
         width: calc(100% 120px);
         left: 120px;
@@ -372,7 +371,7 @@ tr td:last-child {
     }
     header h2 label {
         display: inline-block;
-        background: #82CD47;
+        background: #82cd47;
         padding-right: 0rem;
         margin-right: 1rem;
         height: 40px;
@@ -403,17 +402,17 @@ tr td:last-child {
         z-index: 100;
         width: 345px;
     }
-    
+
     #nav-toggle:checked + .sidebar .sidebar-brand,
     #nav-toggle:checked + .sidebar li {
         padding-left: 2rem;
         text-align: left;
     }
-    
+
     #nav-toggle:checked + .sidebar li a {
         padding-left: 1rem;
     }
-    
+
     #nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
     #nav-toggle:checked + .sidebar li a span:last-child {
         display: inline;
