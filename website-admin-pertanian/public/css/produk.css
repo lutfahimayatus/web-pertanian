@@ -1,6 +1,10 @@
-.link a {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 10px;
-    color: #fff;
+.container-header {
+    display: block;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem 2rem;
+}
+
+.container-header h2 {
+    font-weight: bold;
 }

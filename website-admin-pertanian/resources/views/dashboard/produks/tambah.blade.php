@@ -69,6 +69,7 @@
             </div>
       </header>
       <main>
+        <!-- container -->
         <div class="container">
             <div class="row my-3">
                 <div class="col-md">
@@ -76,7 +77,32 @@
                 </div>
                 <hr>
             </div>
+            <div class="row">
+              <div class="col-md">
+                <form action="" method="post">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nama Produk</label>
+                    <input type="text" class="form-control w-50" id="name" placeholder="Nama Produk" autocomplete="off" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="harga" class="form-label">Harga</label>
+                    <input type="number" class="form-control w-50" id="harga" placeholder="Harga" autocomplete="off" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="deskripsi" class="form-label">Deskripsi</label>
+                    <textarea class="form-control w-50" id="deskripsi" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="stok" class="form-label">Stok</label>
+                    <input type="number" class="form-control w-50" id="stok" placeholder="stok barang" autocomplete="off" required>
+                  </div>
+                </form>
+              </div>
+            </div>
         </div>
+
+
+
         <!-- Footer -->
         <div class="container-fluid">
           <div class="row">

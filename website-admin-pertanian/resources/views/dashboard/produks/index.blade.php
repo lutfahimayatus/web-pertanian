@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- /Public/CSS -->
     <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/produk.css">
   </head>
   <body>
   <input type="checkbox" id="nav-toggle">
@@ -52,7 +53,7 @@
           <label for="nav-toggle">
             <span class="las la-bars"></span>
           </label>
-            Dashboard
+            Produk
         </h2>
 
             <div class="search-wrapper">
@@ -69,20 +70,20 @@
             </div>
       </header>
       <main>
-        <div class="container">
+        <div class="container-header">
           <div class="row my-3">
             <div class="col-md">
-              <h2>Data Siswa</h2>
+              <h2>Data Produk</h2>
             </div>
             <hr>
-          </div>
-          <div class="row">
+            <div class="row">
             <div class="col-md">
-              <a href="#" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Data</a>
-              <a href="#" class="btn btn-success ms-1" target="_blank"><i class="bi bi-printer"></i> Print Data</a>
+              <a href="#" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Produk</a>
+              <a href="#" class="btn btn-success ms-1" target="_blank"><i class="bi bi-printer"></i> Print Data Produk</a>
             </div>
           </div>
-          <div class="row my-5">
+          </div>
+          <div class="row my-5 d-block">
             <div class="col-md">
               <table id="example" class="table table-striped" style="width:100%">
                 <thead>
@@ -98,21 +99,42 @@
                     <tr>
                           <td>Tiger Nixon</td>
                           <td>Rp. 15.000</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
                           <td>50</td>
                           <td>2011-04-25</td>
                       </tr>
                       <tr>
                           <td>Tiger Nixon</td>
                           <td>Rp. 15.000</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
                           <td>50</td>
                           <td>2011-04-25</td>
                       </tr>
                       <tr>
                           <td>Tiger Nixon</td>
                           <td>Rp. 15.000</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>50</td>
+                          <td>2011-04-25</td>
+                      </tr>
+                      <tr>
+                          <td>Tiger Nixon</td>
+                          <td>Rp. 15.000</td>
+                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>50</td>
+                          <td>2011-04-25</td>
+                      </tr>
+                      <tr>
+                          <td>Tiger Nixon</td>
+                          <td>Rp. 15.000</td>
+                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
+                          <td>50</td>
+                          <td>2011-04-25</td>
+                      </tr>
+                      <tr>
+                          <td>Tiger Nixon</td>
+                          <td>Rp. 15.000</td>
+                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
                           <td>50</td>
                           <td>2011-04-25</td>
                       </tr>

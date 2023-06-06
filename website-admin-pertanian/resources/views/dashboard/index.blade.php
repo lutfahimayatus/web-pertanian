@@ -26,13 +26,13 @@
                     <a href="" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="/dashboard/produks"><span class="las la-users"></span><span>Produk</span></a>
+                    <a href="/dashboard/produks"><span class="las la-shopping-bag"></span><span>Produk</span></a>
                 </li>
                 <li>
                     <a href="/dashboard/pemasoks"><span class="las la-clipboard-list"></span><span>Pemasok</span></a>
                 </li>
                 <li>
-                    <a href="/dashboard/kotas"><span class="las la-shopping-bag"></span><span>Kota</span></a>
+                    <a href="/dashboard/kotas"><span class="las la-city"></span><span>Kota</span></a>
                 </li>
                 <li>
                     <a href="/dashboard/transaksis"><span class="las la-receipt"></span><span>Transaksi</span></a>
