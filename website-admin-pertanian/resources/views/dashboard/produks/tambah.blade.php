@@ -79,50 +79,29 @@
             </div>
             <div class="row">
               <div class="col-md">
-                <form action="" method="post">
+                <form action="{{route ('produks.create') }}" method="post" enctype="multipart/form-data">
+                  @csrf
                   <div class="mb-3">
                     <label for="name" class="form-label">Nama Produk</label>
-                    <input type="text" class="form-control w-50" id="name" placeholder="Nama Produk" autocomplete="off" required>
+                    <input type="text" name="nama_produk" class="form-control w-50" id="name" placeholder="Nama Produk" autocomplete="off" required>
                   </div>
                   <div class="mb-3">
                     <label for="harga" class="form-label">Harga</label>
-                    <input type="number" class="form-control w-50" id="harga" placeholder="Harga" autocomplete="off" required>
+                    <input type="number" name="harga" class="form-control w-50" id="harga" placeholder="Harga" autocomplete="off" required>
                   </div>
                   <div class="mb-3">
                     <label for="deskripsi" class="form-label">Deskripsi</label>
-                    <textarea class="form-control w-50" id="deskripsi" rows="3"></textarea>
+                    <textarea class="form-control w-50" name="deskripsi_produk" id="deskripsi" rows="3"></textarea>
                   </div>
                   <div class="mb-3">
                     <label for="stok" class="form-label">Stok</label>
-                    <input type="number" class="form-control w-50" id="stok" placeholder="stok barang" autocomplete="off" required>
+                    <input type="number" class="form-control w-50"  name="stok"  id="stok" placeholder="stok barang" autocomplete="off" required>
                   </div>
+                  <button type="submit" class="btn btn-success">kirim</button>
                 </form>
               </div>
             </div>
         </div>
-
-
-
-        <!-- Footer -->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6">
-              <h4>About</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint iure dolor magni commodi cum expedita unde doloribus, fugiat nemo deleniti culpa et, illo temporibus impedit. Minima, fugiat. Vel, perferendis commodi.</p>
-            </div>
-            <div class="col-md-6 text-center link">
-              <h4>Link Account</h4>
-              <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
-              <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
-              <a href="https://web.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp"></i> Whatsapp</a>
-              <a href="https://github.com/" target="_blank"><i class="bi bi-github"></i> Github</a>
-            </div>
-          </div>
-          <footer class="text-center" style="padding: 5px">
-          <p>Created with by <u class="fw-bold">MAYASARI</u></p>
-        </footer>
-        </div>
-        <!-- End Footer -->
       </main>
     </div>
 

@@ -82,7 +82,7 @@
 
                 <div class="card-single">
                     <div>
-                        <h1>20</h1>
+                        <h1>{{ $produk }}</h1>
                         <span>Total Produks</span>
                     </div>
                     <div>

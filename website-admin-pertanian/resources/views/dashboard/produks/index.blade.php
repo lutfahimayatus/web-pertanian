@@ -78,7 +78,7 @@
             <hr>
             <div class="row">
             <div class="col-md">
-              <a href="#" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Produk</a>
+              <a href="/dashboard/produks/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Produk</a>
               <a href="#" class="btn btn-success ms-1" target="_blank"><i class="bi bi-printer"></i> Print Data Produk</a>
             </div>
           </div>
@@ -95,30 +95,25 @@
                         <th>Option</th>
                     </tr>
                 </thead>
+                @foreach ($produk as $pr)
                 <tbody>
                     <tr>
-                          <td>Tiger Nixon</td>
-                          <td>15.000</td>
-                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
-                          <td>50</td>
+                          <td>{{ $pr -> nama_produk }}</td>
+                          <td>{{ $pr -> harga}}</td>
+                          <td>{{ $pr -> deskripsi_produk}}</td>
+                          <td>{{ $pr -> stok}}</td>
                           <td>
                             <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
                             <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <a href="" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>Tiger Nixon</td>
-                          <td>15.000</td>
-                          <td>Blanditiis distinctio quos explicabo, dolor rerum autem dicta iste repellat a. Ipsum modi accusantium omnis itaque voluptatum, reiciendis illum officia dicta! Ex!</td>
-                          <td>50</td>
-                          <td>
-                            <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <a href="" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+                            <form action="{{ url('delete-produk/'.$pr->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+                            </form>
                           </td>
                       </tr>
                 </tbody>
+                @endforeach
               </table>
             </div>
           </div>
