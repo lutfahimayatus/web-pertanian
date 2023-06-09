@@ -35,7 +35,7 @@
                         <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" required>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary">Login <i class="bi bi-box-arrow-in-right"></i></button>
                     </div>
                 </form>
 

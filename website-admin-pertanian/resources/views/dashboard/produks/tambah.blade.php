@@ -27,7 +27,7 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="/dashboard" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
+                    <a href="/dashboard"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
                     <a href="/dashboard/produks"><span class="las la-users"></span><span>Produk</span></a>
@@ -63,7 +63,6 @@
             <div class="user-wrapper">
             <img width="30" height="30" src="https://img.icons8.com/metro/26/gender-neutral-user.png" alt="gender-neutral-user"/>
                 <div>
-                    <h4>Username</h4>
                     <small>Administrator</small>
                 </div>
             </div>

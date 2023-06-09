@@ -61,7 +61,7 @@
 
             <div class="search-wrapper">
                 <span class="las la-search"></span>
-                <input type="search" placeholder="Search here" />
+                <input type="search" placeholder="Search here" value="{{ old('email') }}"/>
             </div>
 
             <div class="user-wrapper">
@@ -69,12 +69,14 @@
                 <div>
                     <small>Administrator</small>
                     <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-tertiary dropdown-toggle" type="submit" data-bs-toggle="dropdown" aria-expanded="false">
                             Profile
                         </button>
+                        <form action="/logout" method="post">
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left text-danger"></i> Logout</a></li>
+                            <li><a class="dropdown-item" href="/login" class="text-decoration-none"><i class="bi bi-box-arrow-left text-danger"></i> Logout</a></li>
                         </ul>
+                        </form>
                         </div>
                 </div>
             </div>
@@ -129,8 +131,6 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Daftar Transaksi</h3>
-
-                            <button>See alls <span class="las la-arrow-right"></span></button>
                         </div>
                         
                         <div class="card-body">
@@ -172,8 +172,6 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Top Produks</h3>
-
-                            <button>See alls <span class="las la-arrow-right"></span></button>
                         </div>
 
                         <div class="card-body">

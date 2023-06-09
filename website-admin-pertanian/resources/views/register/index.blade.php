@@ -46,7 +46,7 @@
                         @enderror
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Create Account</button>
+                        <button type="submit" class="btn btn-primary">Create Account <i class="bi bi-person-add"></i></button>
                     </div>
                 </form>
 
