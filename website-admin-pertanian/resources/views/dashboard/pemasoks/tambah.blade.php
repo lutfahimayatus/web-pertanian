@@ -52,7 +52,7 @@
           <label for="nav-toggle">
             <span class="las la-bars"></span>
           </label>
-            Produk
+            Dashboard
         </h2>
 
             <div class="search-wrapper">
@@ -73,29 +73,29 @@
         <div class="container">
             <div class="row my-3">
                 <div class="col-md">
-                    <h2><i class="bi bi-plus-circle"></i> Tambah Data Produk</h2>
+                    <h2><i class="bi bi-plus-circle"></i> Tambah Data Pemasok</h2>
                 </div>
                 <hr>
             </div>
             <div class="row">
               <div class="col-md">
-                <form action="{{route ('produks.create') }}" method="post" enctype="multipart/form-data">
+                <form action="{{route ('pemasoks.create') }}" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="mb-3">
-                    <label for="name" class="form-label">Nama Produk</label>
-                    <input type="text" name="nama_produk" class="form-control w-50" id="name" placeholder="Nama Produk" autocomplete="off" required>
+                    <label for="name" class="form-label">Nama Pemasok</label>
+                    <input type="text" name="nama_pemasok" class="form-control w-50" id="name" placeholder="Nama Pemasok" autocomplete="off" required>
                   </div>
                   <div class="mb-3">
-                    <label for="harga" class="form-label">Harga</label>
-                    <input type="number" name="harga" class="form-control w-50" id="harga" placeholder="Harga" autocomplete="off" required>
+                    <label for="no.telp" class="form-label">No_Telp</label>
+                    <input type="number" name="no.telp" class="form-control w-50" id="no.telp" placeholder="No.Telp" autocomplete="off" required>
                   </div>
                   <div class="mb-3">
-                    <label for="deskripsi" class="form-label">Deskripsi</label>
-                    <textarea class="form-control w-50" name="deskripsi_produk" id="deskripsi" rows="3"></textarea>
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control w-50"  name="email"  id="email" placeholder="email pemasok" autocomplete="off" required>
                   </div>
                   <div class="mb-3">
-                    <label for="stok" class="form-label">Stok</label>
-                    <input type="number" class="form-control w-50"  name="stok"  id="stok" placeholder="stok barang" autocomplete="off" required>
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea class="form-control w-50" name="alamat" id="alamat" rows="3"></textarea>
                   </div>
                   <button type="submit" class="btn btn-success">kirim</button>
                 </form>

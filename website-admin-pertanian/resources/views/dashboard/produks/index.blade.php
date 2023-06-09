@@ -23,12 +23,12 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-dashboard"></span> <span>MAYASARI</span></h2>
+        <h2><span class="lab la-dashboard"></span> <span><a href="/dashboard" class="text-decoration-none" style="color: white;"> MAYASARI</a></span></h2>
         </div>
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="/dashboard" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
+                    <a href="/dashboard"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
                     <a href="/dashboard/produks"><span class="las la-users"></span><span>Produk</span></a>
@@ -104,7 +104,12 @@
                           <td>{{ $pr -> stok}}</td>
                           <td>
                             <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                            <form action="{{ url('show-produk/'.$pr->id) }}" method="post">
+                            @csrf
+                            @method('SHOW')
+                            <button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
+                            </form>
+
                             <form action="{{ url('delete-produk/'.$pr->id) }}" method="post">
                             @csrf
                             @method('DELETE')

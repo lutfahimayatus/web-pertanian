@@ -22,12 +22,12 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-dashboard"></span> <span>MAYASARI</span></h2>
+        <h2><span class="lab la-dashboard"></span> <span><a href="/dashboard" class="text-decoration-none" style="color: white;"> MAYASARI</a></span></h2>
         </div>
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="/dashboard" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
+                    <a href="/dashboard"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
                     <a href="/dashboard/produks"><span class="las la-users"></span><span>Produk</span></a>
@@ -78,7 +78,7 @@
           </div>
           <div class="row">
             <div class="col-md">
-              <a href="#" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Data Pemasok</a>
+              <a href="/dashboard/pemasoks/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Data Pemasok</a>
             </div>
           </div>
           <div class="row my-5 d-block">
@@ -93,30 +93,25 @@
                         <th>Action</th>
                     </tr>
                 </thead>
+                @foreach ($pemasok as $pm)
                 <tbody>
                     <tr>
-                          <td>Tiger Nixon</td>
-                          <td>0872645162</td>
-                          <td>politekniknegeri@gmail.com</td>
-                          <td>jln. mastrip 36 pegangsaan nomer 5</td>
+                          <td>{{ $pm -> nama_pemasok}}</td>
+                          <td>{{ $pm -> no_telp}}</td>
+                          <td>{{ $pm -> email}}</td>
+                          <td>{{ $pm -> alamat}}</td>
                           <td>
                             <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
                             <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <a href="" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>Tiger Nixon</td>
-                          <td>0872645162</td>
-                          <td>politekniknegeri@gmail.com</td>
-                          <td>jln. mastrip 36 pegangsaan nomer 5</td>
-                          <td>
-                            <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <a href="" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+                            <form action="{{ url('delete-pemasok/'.$pm->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+                            </form>
                           </td>
                       </tr>
                 </tbody>
+                @endforeach
               </table>
             </div>
           </div>

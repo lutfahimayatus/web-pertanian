@@ -22,12 +22,12 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-dashboard"></span> <span>MAYASARI</span></h2>
+        <h2><span class="lab la-dashboard"></span> <span><a href="/dashboard" class="text-decoration-none" style="color: white;"> MAYASARI</a></span></h2>
         </div>
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="/dashboard" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
+                    <a href="/dashboard"><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
                     <a href="/dashboard/produks"><span class="las la-users"></span><span>Produk</span></a>

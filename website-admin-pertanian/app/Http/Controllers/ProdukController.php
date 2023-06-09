@@ -31,4 +31,12 @@ class ProdukController extends Controller
         
         return redirect()->route('produks.index');
     }
+
+    public function show($id)
+    {
+        $produk=produk::findOrFail($id);
+        $produk->show();
+        
+        return redirect()->route('produks.index');
+    }
 }

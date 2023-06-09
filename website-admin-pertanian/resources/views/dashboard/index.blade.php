@@ -9,6 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Line CSS Template -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- icons bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <!-- /Public/CSS -->
     <link rel="stylesheet" href="/css/dashboard.css">
   </head>
@@ -18,12 +24,12 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-dashboard"></span> <span>MAYASARI</span></h2>
+            <h2><span class="lab la-dashboard"></span> <span><a href="/dashboard" class="text-decoration-none" style="color: white;"> MAYASARI</a></span></h2>
         </div>
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a>
+                    <a href=""><span class="las la-igloo"></span><span>Dashboard</span></a>
                 </li>
                 <li>
                     <a href="/dashboard/produks"><span class="las la-shopping-bag"></span><span>Produk</span></a>
@@ -61,8 +67,15 @@
             <div class="user-wrapper">
             <img width="30" height="30" src="https://img.icons8.com/metro/26/gender-neutral-user.png" alt="gender-neutral-user"/>
                 <div>
-                    <h4>Username</h4>
                     <small>Administrator</small>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Profile
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left text-danger"></i> Logout</a></li>
+                        </ul>
+                        </div>
                 </div>
             </div>
         </header>
@@ -72,8 +85,8 @@
             <div class="cards">
                 <div class="card-single">
                     <div>
-                        <h1>10</h1>
-                        <span>Total Orders</span>
+                        <h1>11</h1>
+                        <span>Total Pemasoks</span>
                     </div>
                     <div>
                         <span class="las la-users"></span>
@@ -141,86 +154,6 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Web Development</td>
-                                            <td>Frontend</td>
-                                            <td>
-                                                <span class="status pink"></span>
-                                                In Progres
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>UIShop App</td>
-                                            <td>Mobile Team</td>
-                                            <td>
-                                                <span class="status orange"></span>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>UI/UX Dsign</td>
-                                            <td>UI Team</td>
-                                            <td>
-                                                <span class="status purple"></span>
-                                                Review
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Web Development</td>
-                                            <td>Frontend</td>
-                                            <td>
-                                                <span class="status pink"></span>
-                                                In Progres
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>UIShop App</td>
-                                            <td>Mobile Team</td>
-                                            <td>
-                                                <span class="status orange"></span>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>UI/UX Dsign</td>
-                                            <td>UI Team</td>
-                                            <td>
-                                                <span class="status purple"></span>
-                                                Review
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Web Development</td>
-                                            <td>Frontend</td>
-                                            <td>
-                                                <span class="status pink"></span>
-                                                In Progres
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>UIShop App</td>
-                                            <td>Mobile Team</td>
-                                            <td>
-                                                <span class="status orange"></span>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>UI/UX Dsign</td>
-                                            <td>UI Team</td>
-                                            <td>
-                                                <span class="status purple"></span>
-                                                Review
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Web Development</td>
-                                            <td>Frontend</td>
-                                            <td>
-                                                <span class="status pink"></span>
-                                                In Progres
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <td>UIShop App</td>
                                             <td>Mobile Team</td>
                                             <td>
@@ -248,104 +181,67 @@
                                 <div class="info">
                                     <img src="" width="40px" height="40px" alt="">
                                     <div>
-                                        <h4>Leon S.Kurniawan</h4>
-                                        <small>CEO Excerpt</small>
+                                        <h4>Insektisida</h4>
                                     </div>
                                 </div>
                                 <div class="contact">
-                                    <span class="las la-user-circle"></span>
-                                    <span class="las la-comment"></span>
-                                    <span class="las la-phone"></span>
+                                    <button type="submit" class="btn btn-primary">Detail</button>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="card-body">
                             <div class="customer">
                                 <div class="info">
                                     <img src="" width="40px" height="40px" alt="">
                                     <div>
-                                        <h4>Leon S.Kurniawan</h4>
-                                        <small>CEO Excerpt</small>
+                                        <h4>Insektisida</h4>
                                     </div>
                                 </div>
                                 <div class="contact">
-                                    <span class="las la-user-circle"></span>
-                                    <span class="las la-comment"></span>
-                                    <span class="las la-phone"></span>
+                                    <button type="submit" class="btn btn-primary">Detail</button>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="card-body">
                             <div class="customer">
                                 <div class="info">
                                     <img src="" width="40px" height="40px" alt="">
                                     <div>
-                                        <h4>Leon S.Kurniawan</h4>
-                                        <small>CEO Excerpt</small>
+                                        <h4>Insektisida</h4>
                                     </div>
                                 </div>
                                 <div class="contact">
-                                    <span class="las la-user-circle"></span>
-                                    <span class="las la-comment"></span>
-                                    <span class="las la-phone"></span>
+                                    <button type="submit" class="btn btn-primary">Detail</button>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="card-body">
                             <div class="customer">
                                 <div class="info">
                                     <img src="" width="40px" height="40px" alt="">
                                     <div>
-                                        <h4>Leon S.Kurniawan</h4>
-                                        <small>CEO Excerpt</small>
+                                        <h4>Insektisida</h4>
                                     </div>
                                 </div>
                                 <div class="contact">
-                                    <span class="las la-user-circle"></span>
-                                    <span class="las la-comment"></span>
-                                    <span class="las la-phone"></span>
+                                    <button type="submit" class="btn btn-primary">Detail</button>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="card-body">
                             <div class="customer">
                                 <div class="info">
                                     <img src="" width="40px" height="40px" alt="">
                                     <div>
-                                        <h4>Leon S.Kurniawan</h4>
-                                        <small>CEO Excerpt</small>
+                                        <h4>Insektisida</h4>
                                     </div>
                                 </div>
                                 <div class="contact">
-                                    <span class="las la-user-circle"></span>
-                                    <span class="las la-comment"></span>
-                                    <span class="las la-phone"></span>
-                                </div>
-                            </div>
-
-                            <div class="customer">
-                                <div class="info">
-                                    <img src="" width="40px" height="40px" alt="">
-                                    <div>
-                                        <h4>Leon S.Kurniawan</h4>
-                                        <small>CEO Excerpt</small>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <span class="las la-user-circle"></span>
-                                    <span class="las la-comment"></span>
-                                    <span class="las la-phone"></span>
-                                </div>
-                            </div>
-
-                            <div class="customer">
-                                <div class="info">
-                                    <img src="" width="40px" height="40px" alt="">
-                                    <div>
-                                        <h4>Leon S.Kurniawan</h4>
-                                        <small>CEO Excerpt</small>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <span class="las la-user-circle"></span>
-                                    <span class="las la-comment"></span>
-                                    <span class="las la-phone"></span>
+                                    <button type="submit" class="btn btn-primary">Detail</button>
                                 </div>
                             </div>
                         </div>

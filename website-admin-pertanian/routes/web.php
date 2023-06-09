@@ -35,13 +35,15 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Route::get('/dashboard/produks', [ProdukController::class, 'index'])->name('produks.index');
-
 Route::get('/dashboard/produks/tambah', [ProdukController::class, 'tambah'])->name('tambah');
-
 Route::post('/create-produk', [ProdukController::class, 'create'])->name('produks.create');
 Route::delete('/delete-produk/{id}', [ProdukController::class, 'delete'])->name('produks.delete');
+Route::post('/update-produk/{id}', [ProdukController::class, 'update'])->name('produk.update');
 
-Route::get('/dashboard/pemasoks', [PemasokController::class, 'index']);
+Route::get('/dashboard/pemasoks', [PemasokController::class, 'index'])->name('pemasoks.index');
+Route::get('/dashboard/pemasoks/tambah', [PemasokController::class, 'tambah'])->name('tambah');
+Route::post('/create-pemasok', [PemasokController::class, 'create'])->name('pemasoks.create');
+Route::delete('/delete-pemasok/{id}', [PemasokController::class, 'delete'])->name('pemasoks.delete');
 
 Route::get('/dashboard/kotas', [KotaController::class, 'index']);
 
