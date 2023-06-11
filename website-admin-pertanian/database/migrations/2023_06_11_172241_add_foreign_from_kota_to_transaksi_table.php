@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('detail_transaksis', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_produk')->unique();
-            $table->unsignedBigInteger('id_transaksi')->unique();
-            $table->integer('qty');
-            $table->integer('total_harga');
-            $table->timestamps();
+        Schema::table('transaksis', function (Blueprint $table) {
+            $table->foreign('id_kota')->references('id')->on('kotas');
         });
     }
 
@@ -30,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_transaksis');
+        Schema::table('kota_to_transaksi', function (Blueprint $table) {
+            //
+        });
     }
 };

@@ -36,6 +36,7 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Route::get('/dashboard/produks', [ProdukController::class, 'index'])->name('produks.index');
 Route::get('/dashboard/produks/tambah', [ProdukController::class, 'tambah'])->name('tambah');
+Route::post('/dashboard/produks/edit', [ProdukController::class, 'edit'])->name('produk.edit');
 Route::post('/create-produk', [ProdukController::class, 'create'])->name('produks.create');
 Route::delete('/delete-produk/{id}', [ProdukController::class, 'delete'])->name('produks.delete');
 Route::post('/update-produk/{id}', [ProdukController::class, 'update'])->name('produk.update');

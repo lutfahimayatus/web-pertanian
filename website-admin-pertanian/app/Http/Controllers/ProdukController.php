@@ -32,7 +32,35 @@ class ProdukController extends Controller
         return redirect()->route('produks.index');
     }
 
-    public function show($id)
+    public function update(Request $request, $id)
+    {
+        // Validasi input
+        $request->validate([
+            'nama_produk' => 'required',
+            'harga' => 'required|numeric',
+            'deskripsi_produk' => 'required',
+            'stok' => 'required|numeric',
+        ]);
+
+        // Temukan produk berdasarkan ID
+        $produk = Produk::find($id);
+
+        if (!$produk) {
+            return back()->with('error', 'Produk tidak ditemukan');
+        }
+
+        // Update data produk
+        $produk->nama_produk = $request->nama_produk;
+        $produk->harga = $request->harga;
+        $produk->deskripsi_produk = $request->deskripsi_produk;
+        $produk->stok = $request->stok;
+        $produk->save();
+
+        return back()->with('success', 'Produk berhasil diperbarui');
+    }
+
+    
+    public function detailProduk($id)
     {
         $produk=produk::findOrFail($id);
         $produk->show();

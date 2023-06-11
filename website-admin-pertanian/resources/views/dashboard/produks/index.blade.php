@@ -78,7 +78,9 @@
             <hr>
             <div class="row">
             <div class="col-md">
-              <a href="/dashboard/produks/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Produk</a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProdukModal">
+        <i class="bi bi-plus"></i> Tambah Produk
+      </button>
               <a href="#" class="btn btn-success ms-1" target="_blank"><i class="bi bi-printer"></i> Print Data Produk</a>
             </div>
           </div>
@@ -107,8 +109,9 @@
                             <form action="{{ url('show-produk/'.$pr->id) }}" method="post">
                             @csrf
                             @method('SHOW')
-                            <button type="submit" class="btn btn-warning"><i class="bi bi-pencil-square"></i></button>
                             </form>
+                            
+                           <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editProdukModal{{ $pr->id }}"><i class="bi bi-pencil-square"></i></button>
 
                             <form action="{{ url('delete-produk/'.$pr->id) }}" method="post">
                             @csrf
@@ -126,18 +129,78 @@
       </main>
     </div>
 
+<!-- Tambah Produk Modal -->
+<div class="modal fade" id="addProdukModal" tabindex="-1" aria-labelledby="addProdukModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addProdukModalLabel">Tambah Produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form Tambah Produk -->
+        <form action="{{ route('produks.create') }}" method="POST">
+          @csrf
+          <div class="mb-3">
+            <label for="namaProduk" class="form-label">Nama Produk</label>
+            <input type="text" class="form-control" id="namaProduk" name="nama_produk" required>
+          </div>
+          <div class="mb-3">
+            <label for="hargaProduk" class="form-label">Harga</label>
+            <input type="number" class="form-control" id="hargaProduk" name="harga" required>
+          </div>
+          <div class="mb-3">
+            <label for="deskripsiProduk" class="form-label">Deskripsi</label>
+            <textarea class="form-control" id="deskripsiProduk" name="deskripsi_produk" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="stokProduk" class="form-label">Stok</label>
+            <input type="number" class="form-control" id="stokProduk" name="stok" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Tambah</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
+  @foreach ($produk as $pr)
+    <!-- Modal Edit Produk -->
+    <div class="modal fade" id="editProdukModal{{ $pr->id }}" tabindex="-1" aria-labelledby="editProdukModalLabel{{ $pr->id }}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProdukModalLabel{{ $pr->id }}">Edit Produk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('produk.update', $pr->id) }}" method="POST">
+                        @csrf
+                        @method('POST')
+                        <div class="mb-3">
+                            <label for="editNamaProduk" class="form-label">Nama Produk</label>
+                            <input type="text" class="form-control" id="editNamaProduk" name="nama_produk" value="{{ $pr->nama_produk }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editHargaProduk" class="form-label">Harga</label>
+                            <input type="number" class="form-control" id="editHargaProduk" name="harga" value="{{ $pr->harga }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDeskripsiProduk" class="form-label">Deskripsi</label>
+                            <textarea class="form-control" id="editDeskripsiProduk" name="deskripsi_produk" required>{{ $pr->deskripsi_produk }}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editStokProduk" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="editStokProduk" name="stok" value="{{ $pr->stok }}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
 
 
   <!-- Bootstrap -->

@@ -13,16 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('detail_transaksis', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_produk')->unique();
-            $table->unsignedBigInteger('id_transaksi')->unique();
-            $table->integer('qty');
-            $table->integer('total_harga');
-            $table->timestamps();
+        Schema::table('detail_transaksis', function (Blueprint $table) {
+            $table->foreign('id_produk')->references('id')->on('produks');
+            $table->foreign('id_transaksi')->references('id')->on('transaksis');
         });
     }
-
+        
     /**
      * Reverse the migrations.
      *
@@ -30,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_transaksis');
+        Schema::table('detail_transaksi', function (Blueprint $table) {
+            $table->dropForeign('detail_transaksis_id_produk_foreign');
+        });
     }
 };
