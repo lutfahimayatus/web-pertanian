@@ -72,7 +72,7 @@
         <div class="container">
             <div class="row my-3">
                 <div class="col-md">
-                    <h2><i class="bi bi-plus-circle"></i> Tambah Data Pemasok</h2>
+                    <h2> Tambah Data Pemasok</h2>
                 </div>
                 <hr>
             </div>

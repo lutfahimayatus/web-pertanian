@@ -78,7 +78,7 @@
           </div>
           <div class="row">
             <div class="col-md">
-              <a href="/dashboard/pemasoks/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Data Pemasok</a>
+              <a href="/dashboard/pemasoks/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> TambahPemasok</a>
             </div>
           </div>
           <div class="row my-5 d-block">
