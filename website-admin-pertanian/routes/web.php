@@ -48,4 +48,9 @@ Route::delete('/delete-pemasok/{id}', [PemasokController::class, 'delete'])->nam
 
 Route::get('/dashboard/kotas', [KotaController::class, 'index']);
 
+<<<<<<< Updated upstream
 Route::get('/dashboard/transaksis', [TransaksiController::class, 'index'])->name('transaksi.index');
+=======
+Route::get('/dashboard/transaksis', [TransaksiController::class, 'index']);
+
+>>>>>>> Stashed changes

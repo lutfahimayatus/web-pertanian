@@ -10,6 +10,7 @@ class transaksi extends Model
 {
     use HasFactory;
     protected $fillable = [
+<<<<<<< Updated upstream
         'Tanggal Transaksi',
         'Total Harga',
         'Status',
@@ -18,5 +19,8 @@ class transaksi extends Model
         'Kota',
         'Alamat',
         'Action',
+=======
+        'status_transaksi'
+>>>>>>> Stashed changes
     ];
 }

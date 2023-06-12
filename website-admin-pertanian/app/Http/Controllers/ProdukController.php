@@ -29,7 +29,8 @@ class ProdukController extends Controller
         $produk=produk::findOrFail($id);
         $produk->delete();
         
-        return redirect()->route('produks.index');
+        // return redirect()->route('produks.index');
+        return response()->json($produk);
     }
 
     public function update(Request $request, $id)
@@ -56,7 +57,8 @@ class ProdukController extends Controller
         $produk->stok = $request->stok;
         $produk->save();
 
-        return back()->with('success', 'Produk berhasil diperbarui');
+        // return back()->with('success', 'Produk berhasil diperbarui');
+        return response()->json($produk);
     }
 
     
@@ -67,4 +69,15 @@ class ProdukController extends Controller
         
         return redirect()->route('produks.index');
     }
+    public function store(Request $request){
+            $produk = produk::create($request->all());
+            $produk -> save();
+
+            return response()->json($produk);
+    }
+    public function show($id){
+        $produk = produk::FindOrFail($id);
+        return response()->json($produk);
+    }
+
 }
