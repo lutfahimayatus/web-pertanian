@@ -1,15 +1,8 @@
 <?php
 
 namespace Database\Factories;
-<<<<<<< Updated upstream
 use App\Models\transaksi;
 use Illuminate\Database\Eloquent\Factories\Factory;
-=======
-
-use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\transaksi;
-
->>>>>>> Stashed changes
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Transaksi>
@@ -24,7 +17,6 @@ class TransaksiFactory extends Factory
     public function definition()
     {
         return [
-<<<<<<< Updated upstream
             'id_user'=>1,
             'id_kota'=>1,
             'tanggal_transaksi'=>now(),
@@ -38,9 +30,6 @@ class TransaksiFactory extends Factory
             'created_at'=>now(),
             'updated_at'=>now()
 
-=======
-            //
->>>>>>> Stashed changes
         ];
     }
 }
