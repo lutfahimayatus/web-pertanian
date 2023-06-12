@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user')->unique();
-            $table->foreignId('id_kota')->unique();
+            $table->foreignId('id_user');
+            $table->foreignId('id_kota');
             $table->string('tanggal_transaksi');
             $table->string('total_bayar');
             $table->string('bukti_transaksi');

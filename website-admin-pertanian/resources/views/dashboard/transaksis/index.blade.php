@@ -78,43 +78,43 @@
           </div>
           <div class="row">
             <div class="col-md">
-              <a href="#" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Data Transaksi</a>
-              <a href="#" class="btn btn-success ms-1" target="_blank"><i class="bi bi-printer"></i> Print Data Transaksi</a>
+              
             </div>
           </div>
           <div class="row my-5 d-block">
-            <div class="col-md">
-              <table id="example" class="table table-striped" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Tanggal Transaksi</th>
-                        <th>Total Harga</th>
-                        <th>Status</th>
-                        <th>Bukti Transfer</th>
-                        <th>No Resi</th>
-                        <th>Kota</th>
-                        <th>Alamat</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                          <td>Tiger Nixon</td>
-                          <td>Rp. 15.000</td>
-                          <td>Blanditiis distinctio quos explicabo</td>
-                          <td>50</td>
-                          <td>2011-04-25</td>
-                          <td>2011-04-25</td>
-                          <td>2011-04-25</td>
-                          <td>
-                            <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <a href="" class="btn btn-success"><i class="bi bi-bag-plus"></i></i></a>
-                          </td>
-                      </tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="col-md">
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Tanggal Transaksi</th>
+                <th>Total Harga</th>
+                <th>Status</th>
+                <th>Bukti Transfer</th>
+                <th>No Resi</th>
+                <th>Kota</th>
+                <th>Alamat</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($transaksi as $item)
+            <tr>
+                <td>{{ $item->tanggal_transaksi }}</td>
+                <td>Rp. {{ $item->total_harga }}</td>
+                <td>{{ $item->status }}</td>
+                <td>{{ $item->bukti_transfer }}</td>
+                <td>{{ $item->no_resi }}</td>
+                <td>{{ $item->kota }}</td>
+                <td>{{ $item->alamat }}</td>
+                <td>
+                    <a href="#" class="btn btn-info" ><i class="bi bi-eye"></i></a>
+                    <a href="#" class="btn btn-warning"data-bs-toggle="modal" data-bs-target="#editModal{{ $item->id }}"><i class="bi bi-pencil-square"></i></a>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
           </div>
         </div>
       </main>
@@ -123,7 +123,60 @@
 
 
 
-
+    @foreach ($transaksi as $item)
+<!-- Modal Edit Transaksi -->
+  <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1" aria-labelledby="editModalLabel{{ $item->id }}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel{{ $item->id }}">Edit Transaksi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form Edit Transaksi -->
+        <form action=''
+        method="POST">
+          @csrf
+          @method('POST')
+          <div class="mb-3">
+            <label for="editTanggal{{ $item->id }}" class="form-label">Tanggal Transaksi</label>
+            <input type="date" class="form-control" id="editTanggal{{ $item->id }}" name="tanggal_transaksi" value="{{ $item->tanggal_transaksi }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="editTotalHarga{{ $item->id }}" class="form-label">Total Harga</label>
+            <input type="text" class="form-control" id="editTotalHarga{{ $item->id }}" name="total_harga" value="{{ $item->total_harga }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="editStatus{{ $item->id }}" class="form-label">Status</label>
+            <select class="form-select" id="editStatus{{ $item->id }}" name="status" required>
+              <option value="1" {{ $item->status == 1 ? 'selected' : '' }}>Pembayaran Diterima</option>
+              <option value="2" {{ $item->status == 2 ? 'selected' : '' }}>Pembayaran Pending</option>
+              <option value="3" {{ $item->status == 3 ? 'selected' : '' }}>Pembayaran Ditolak</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="editBuktiTransfer{{ $item->id }}" class="form-label">Bukti Transfer</label>
+            <input type="text" class="form-control" id="editBuktiTransfer{{ $item->id }}" name="bukti_transfer" value="{{ $item->bukti_transfer }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="editNoResi{{ $item->id }}" class="form-label">No Resi</label>
+            <input type="text" class="form-control" id="editNoResi{{ $item->id }}" name="no_resi" value="{{ $item->no_resi }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="editKota{{ $item->id }}" class="form-label">Kota</label>
+            <input type="text" class="form-control" id="editKota{{ $item->id }}" name="kota" value="{{ $item->kota }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="editAlamat{{ $item->id }}" class="form-label">Alamat</label>
+            <input type="text" class="form-control" id="editAlamat{{ $item->id }}" name="alamat" value="{{ $item->alamat }}" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+@endforeach
 
 
 
