@@ -14,6 +14,6 @@ class TransaksiSeeder extends Seeder
      */
     public function run()
     {
-        transaksi::factory(20)->create();
+        transaksi::factory(40)->create();
     }
 }
