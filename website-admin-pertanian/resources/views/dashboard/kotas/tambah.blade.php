@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kota</title>
+    <title>Tambah Kota</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -22,7 +22,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
-        <h2><span class="lab la-dashboard"></span> <span><a href="/dashboard" class="text-decoration-none" style="color: white;"> MAYASARI</a></span></h2>
+            <h2><span class="lab la-dashboard"></span> <span>MAYASARI</span></h2>
         </div>
         <div class="sidebar-menu">
             <ul>
@@ -68,48 +68,30 @@
             </div>
       </header>
       <main>
+        <!-- container -->
         <div class="container">
-          <div class="row my-3">
-            <div class="col-md">
-              <h2>Kota</h2>
+            <div class="row my-3">
+                <div class="col-md">
+                    <h2>Tambah Data Kota</h2>
+                </div>
+                <hr>
             </div>
-            <hr>
-          </div>
-          <div class="row">
-            <div class="col-md">
-              <a href="/dashboard/kotas/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Kota</a>
+            <div class="row">
+              <div class="col-md">
+                <form action="{{route ('kotas.create') }}" method="post" enctype="multipart/form-data">
+                  @csrf
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nama Kota</label>
+                    <input type="text" name="nama_kota" class="form-control w-50" id="name" placeholder="nama kota" autocomplete="off" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ongkos_kirim" class="form-label">Ongkos Kirim</label>
+                    <input type="number" name="ongkos_kirim" class="form-control w-50" id="ongkos_kirim" placeholder="ongkos kirim" autocomplete="off" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">kirim</button>
+                </form>
+              </div>
             </div>
-          </div>
-          <div class="row my-5 d-block">
-            <div class="col-md">
-              <table id="example" class="table table-striped" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Nama Kota</th>
-                        <th>Ongkos Kirim</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                @foreach ($kota as $kt)
-                <tbody>
-                    <tr>
-                          <td>{{ $kt -> nama_kota}}</td>
-                          <td>{{ $kt -> ongkos_kirim}}</td>
-                          <td>
-                            <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <form action="{{ url('delete-kota/'.$kt->id) }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
-                            </form>
-                          </td>
-                      </tr>
-                </tbody>
-                @endforeach
-              </table>
-            </div>
-          </div>
         </div>
       </main>
     </div>
@@ -130,15 +112,6 @@
 
   <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <!-- Data Tabel -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-    
-    <script>
-      $(document).ready(function () {
-      $('#example').DataTable();
-      });
     </script>
   </body>
 </html>

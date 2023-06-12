@@ -31,6 +31,11 @@ Route::delete('/produk-hapus/{id}',[ProdukController::class,'delete'])->name('pr
 Route::get('/produk-detail/{id}',[ProdukController::class,'show'])->name('produk_show');
 Route::put('/produk-update/{id}',[ProdukController::class,'update'])->name('produk_update');
 
+Route::post('/pemasok-tambah',[PemasokController::class,'store'])->name('pemasok_store');
+Route::delete('/pemasok-hapus/{id}',[PemasokController::class,'delete'])->name('pemasok_delete');
+Route::get('/pemasok-detail/{id}',[PemasokController::class,'show'])->name('pemasok_show');
+Route::post('/pemasok-update/{id}',[PemasokController::class,'update'])->name('pemasok_update');
+
 Route::put('/transaksi-update/{id}',[ProdukController::class,'update'])->name('transaksi.update');
 Route::get('/transaksi-detail/{id}',[ProdukController::class,'show'])->name('transaksi.show');
 

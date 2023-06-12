@@ -64,7 +64,6 @@
             <img width="30" height="30" src="https://img.icons8.com/metro/26/gender-neutral-user.png" alt="gender-neutral-user"/>
                 <div>
                     <h4>Username</h4>
-                    <small>Administrator</small>
                 </div>
             </div>
       </header>
@@ -75,10 +74,10 @@
               <h2>Data Pemasok</h2>
             </div>
             <hr>
-          </div>
           <div class="row">
             <div class="col-md">
-              <a href="/dashboard/pemasoks/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> TambahPemasok</a>
+              <a href="/dashboard/pemasoks/tambah" class="btn btn-primary"><i class="bi bi-plus"></i> Tambah Pemasok</a>
+              </div>
             </div>
           </div>
           <div class="row my-5 d-block">
@@ -87,9 +86,9 @@
                 <thead>
                     <tr>
                         <th>Nama Pemasok</th>
-                        <th>No Telp</th>
+                        <th>Nomor Telphone</th>
                         <th>Email</th>
-                        <th>Alamat</th>
+                        <th>Alamat Pemasok</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -102,7 +101,13 @@
                           <td>{{ $pm -> alamat}}</td>
                           <td>
                             <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+
+                            <form action="{{ url('show-pemasok/'.$pm->id) }}" method="post">
+                            @csrf
+                            @method('SHOW')
+                            </form>
+                           <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPemasokModal{{ $pm->id }}"><i class="bi bi-pencil-square"></i></button>
+
                             <form action="{{ url('delete-pemasok/'.$pm->id) }}" method="post">
                             @csrf
                             @method('DELETE')
@@ -119,18 +124,42 @@
       </main>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+    @foreach ($pemasok as $pm)
+    <!-- Modal Edit Pemasok -->
+    <div class="modal fade" id="editPemasokModal{{ $pm->id }}" tabindex="-1" aria-labelledby="editPemasokModalLabel{{ $pm->id }}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPemasokModalLabel{{ $pm->id }}">Edit Produk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('pemasok.update', $pm->id) }}" method="POST">
+                        @csrf
+                        @method('POST')
+                        <div class="mb-3">
+                            <label for="editNamaPemasok" class="form-label">Nama Pemasok</label>
+                            <input type="text" class="form-control" id="editNamaPemasok" name="nama_pemasok" value="{{ $pm->nama_pemasok }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editNo_telpPemasok" class="form-label">Nomor Telphone</label>
+                            <input type="number" class="form-control" id="editNo_telpPemasok" name="no_telp" value="{{ $pm->no_telp }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEmailPemasok" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmailPemasok" name="email" value="{{ $pm->email }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editAlamatPemasok" class="form-label">Alamat</label>
+                            <textarea class="form-control" id="editAlamatPemasok" name="alamat" required>{{ $pm->alamat }}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
 
 
   <!-- Bootstrap -->

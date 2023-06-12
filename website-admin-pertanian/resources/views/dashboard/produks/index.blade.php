@@ -65,7 +65,6 @@
             <img width="30" height="30" src="https://img.icons8.com/metro/26/gender-neutral-user.png" alt="gender-neutral-user"/>
                 <div>
                     <h4>Username</h4>
-                    <small>Administrator</small>
                 </div>
             </div>
       </header>
@@ -79,8 +78,8 @@
             <div class="row">
             <div class="col-md">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProdukModal">
-        <i class="bi bi-plus"></i> Tambah Produk
-      </button>
+                <i class="bi bi-plus"></i> Tambah Produk
+              </button>
               <a href="#" class="btn btn-success ms-1" target="_blank"><i class="bi bi-printer"></i> Print Data Produk</a>
             </div>
           </div>

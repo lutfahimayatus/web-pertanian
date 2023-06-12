@@ -43,8 +43,10 @@ Route::post('/update-produk/{id}', [ProdukController::class, 'update'])->name('p
 
 Route::get('/dashboard/pemasoks', [PemasokController::class, 'index'])->name('pemasoks.index');
 Route::get('/dashboard/pemasoks/tambah', [PemasokController::class, 'tambah'])->name('tambah');
+Route::post('/dashboard/pemasoks/edit', [PemasokController::class, 'edit'])->name('pemasok.edit');
 Route::post('/create-pemasok', [PemasokController::class, 'create'])->name('pemasoks.create');
 Route::delete('/delete-pemasok/{id}', [PemasokController::class, 'delete'])->name('pemasoks.delete');
+Route::post('/update-pemasok/{id}', [PemasokController::class, 'update'])->name('pemasok.update');
 
 Route::get('/dashboard/kotas', [KotaController::class, 'index']) -> name('kotas.index');
 Route::get('/dashboard/kotas/tambah', [KotaController::class, 'tambah'])->name('tambah');
