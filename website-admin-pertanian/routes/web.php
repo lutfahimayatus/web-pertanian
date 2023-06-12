@@ -46,6 +46,9 @@ Route::get('/dashboard/pemasoks/tambah', [PemasokController::class, 'tambah'])->
 Route::post('/create-pemasok', [PemasokController::class, 'create'])->name('pemasoks.create');
 Route::delete('/delete-pemasok/{id}', [PemasokController::class, 'delete'])->name('pemasoks.delete');
 
-Route::get('/dashboard/kotas', [KotaController::class, 'index']);
+Route::get('/dashboard/kotas', [KotaController::class, 'index']) -> name('kotas.index');
+Route::get('/dashboard/kotas/tambah', [KotaController::class, 'tambah'])->name('tambah');
+Route::post('/create-kota', [KotaController::class, 'create'])->name('kotas.create');
+Route::delete('/delete-kota/{id}', [KotaController::class, 'delete'])->name('kotas.delete');
 
 Route::get('/dashboard/transaksis', [TransaksiController::class, 'index'])->name('transaksi.index');

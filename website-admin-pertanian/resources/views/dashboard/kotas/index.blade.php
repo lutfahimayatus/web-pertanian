@@ -91,28 +91,11 @@
                         <th>Action</th>
                     </tr>
                 </thead>
+                @foreach ($kota as $kt)
                 <tbody>
                     <tr>
-                          <td>Tiger Nixon</td>
-                          <td>Rp. 15.000</td>
-                          <td>
-                            <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <a href="" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>Tiger Nixon</td>
-                          <td>Rp. 15.000</td>
-                          <td>
-                            <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                            <a href="" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>Tiger Nixon</td>
-                          <td>Rp. 15.000</td>
+                          <td>{{ $kt -> nama_kota}}</td>
+                          <td>{{ $kt -> ongkos_kirim}}</td>
                           <td>
                             <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
                             <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
@@ -120,6 +103,7 @@
                           </td>
                       </tr>
                 </tbody>
+                @endforeach
               </table>
             </div>
           </div>

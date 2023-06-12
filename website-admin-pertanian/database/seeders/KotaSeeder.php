@@ -1,11 +1,12 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\transaksi;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\kota;
 
-class TransaksiSeeder extends Seeder
+class KotaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +15,6 @@ class TransaksiSeeder extends Seeder
      */
     public function run()
     {
-        transaksi::factory(20)->create();
+        $kota = kota:: factory(10)->create();
     }
 }
