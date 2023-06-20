@@ -12,7 +12,7 @@
             @endif
 
             @if(session()->has('loginError'))
-            <div class="alert alert-succes alert-dismissible fade show" role="alert">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session('loginError') }}
             </div>
             @endif
@@ -30,6 +30,7 @@
                         </div>
                         @enderror
                     </div>
+
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" required>
